@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Speciality Clinic | Rajendra Nagar, Patna</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandSky: '#0284C7',
+            brandSkyHover: '#0369A1',
+            brandSkyLight: '#E0F2FE',
+            brandIce: '#F0F9FF',
+            brandDark: '#0F172A',
+            brandSlate: '#334155',
+            brandMuted: '#64748B',
+            brandEmerald: '#10B981'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .glow-sm {
+      box-shadow: 0 4px 20px -2px rgba(2, 132, 199, 0.15);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-brandDark font-sans antialiased selection:bg-brandSky selection:text-white">
+
+  <!-- 1. Top Alert / OPD Timing Notification Bar -->
+  <aside aria-label="OPD Timings and Emergency Contact" class="bg-brandDark text-slate-200 text-xs py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center p-1 rounded-full bg-emerald-500/20 text-brandEmerald">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+        </span>
+        <span>
+          <strong class="text-white font-semibold">Clinic Status:</strong> Open Today • Closes 7:00 PM <span class="text-slate-500">|</span> <span class="text-emerald-400">Appointments Recommended</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300">
+        <a href="tel:+916287836610" class="hover:text-brandSky flex items-center gap-1.5 transition-colors">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brandSky"></i>
+          <span>Call: 062878 36610</span>
+        </a>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:flex items-center gap-1 text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brandSky"></i>
+          Rajendra Nagar, Patna
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Clinic Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-brandSky flex items-center justify-center text-white shadow-md shadow-brandSky/25 group-hover:scale-105 transition-transform">
+          <i data-lucide="smile" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="block text-lg font-bold tracking-tight text-brandDark group-hover:text-brandSky transition-colors">
+            Dental Speciality <span class="text-brandSky font-medium">Clinic</span>
+          </span>
+          <span class="block text-[11px] font-medium uppercase tracking-wider text-brandMuted">डेंटल स्पेशलिटी क्लिनिक • Patna</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-brandSlate">
+        <a href="#specialists" class="hover:text-brandSky transition-colors">Specialist Doctors</a>
+        <a href="#treatments" class="hover:text-brandSky transition-colors">Treatments</a>
+        <a href="#timings" class="hover:text-brandSky transition-colors">Hours</a>
+        <a href="#facilities" class="hover:text-brandSky transition-colors">Amenities</a>
+        <a href="#location" class="hover:text-brandSky transition-colors">Location</a>
+      </nav>
+
+      <!-- Desktop Booking Action -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/916287836610?text=Hi,%20I%20want%20to%20book%20a%20dental%20appointment%20at%20Dental%20Speciality%20Clinic" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 transition-colors">
+          <i data-lucide="message-square" class="w-4 h-4 text-emerald-600"></i>
+          <span>WhatsApp Chat</span>
+        </a>
+        <a href="#book" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-brandSky hover:bg-brandSkyHover shadow-sm hover:shadow-brandSky/20 transition-all">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section -->
+  <section class="relative pt-10 pb-20 lg:pt-16 lg:pb-28 bg-gradient-to-b from-brandIce/60 via-white to-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <!-- Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Rating Pill from Google Maps -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold">
+            <span class="flex items-center text-amber-500">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </span>
+            <span class="font-bold text-brandDark">4.8 / 5.0</span>
+            <span class="text-slate-500">(29 Verified Patient Reviews)</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brandDark tracking-tight leading-[1.15]">
+            Multi-Speciality Dental Care in <span class="text-brandSky">Rajendra Nagar.</span>
+          </h1>
+
+          <p class="text-brandSlate text-base sm:text-lg font-normal max-w-2xl leading-relaxed mx-auto lg:mx-0">
+            Led by experienced MDS super-specialists in Prosthodontics, Maxillofacial Surgery, and Pediatric Child Dental Care. Advanced oral health solutions under one roof.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#book" class="w-full sm:w-auto px-8 py-4 rounded-xl text-center text-sm font-bold text-white bg-brandSky hover:bg-brandSkyHover shadow-lg shadow-brandSky/20 transition-all">
+              Book Appointment Online
+            </a>
+            <a href="tel:+916287836610" class="w-full sm:w-auto px-7 py-4 rounded-xl text-center text-sm font-bold text-brandSlate bg-white border border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-brandSky"></i>
+              <span>Call 062878 36610</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-left">
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-lg bg-emerald-50 text-brandEmerald">
+                <i data-lucide="accessibility" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs sm:text-sm font-bold text-brandDark">Accessible</p>
+                <p class="text-[11px] sm:text-xs text-brandMuted">Wheelchair Friendly</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-lg bg-sky-50 text-brandSky">
+                <i data-lucide="baby" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs sm:text-sm font-bold text-brandDark">Pediatric Care</p>
+                <p class="text-[11px] sm:text-xs text-brandMuted">Child Dental Specialist</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="p-2 rounded-lg bg-emerald-50 text-brandEmerald">
+                <i data-lucide="credit-card" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-xs sm:text-sm font-bold text-brandDark">NFC & UPI</p>
+                <p class="text-[11px] sm:text-xs text-brandMuted">Digital Payments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Image Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border-4 border-white glow-sm">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Dental Speciality Clinic Treatment Room" class="w-full h-full object-cover aspect-[4/5] object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark/75 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-white/50 text-left">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brandSky text-white flex items-center justify-center font-bold">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-brandDark">Behind Charminar Apartments</p>
+                  <p class="text-[11px] text-brandMuted">Block 10, Rd Number 10, Rajendra Nagar, Patna</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Team of Doctors & Super Specialists Section -->
+  <section id="specialists" class="py-20 bg-brandIce/50 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-brandSky bg-brandSky/10 px-3 py-1 rounded-full">Medical Board</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brandDark mt-3 mb-2">Our Specialist Doctors</h2>
+        <p class="text-sm text-brandSlate">Highly qualified MDS consultants providing dedicated specialty care in Patna.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Doctor 1: Dr. Jyoti Prasad -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="w-16 h-16 rounded-2xl bg-sky-50 text-brandSky flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-8 h-8"></i>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brandSky bg-sky-50 px-2.5 py-1 rounded-md">Prosthodontics & Implants</span>
+          <h3 class="text-xl font-bold text-brandDark mt-3">Dr. Jyoti Prasad</h3>
+          <p class="text-xs font-semibold text-brandSlate mb-1">BDS (Pat) MDS (LKO)</p>
+          <p class="text-xs text-brandEmerald font-bold mb-4">Consultant Prosthodontist & Oral Implantologist</p>
+          <p class="text-xs text-brandMuted leading-relaxed border-t border-slate-100 pt-3">
+            Specialized in dental implants, full mouth rehabilitations, fixed bridges, and cosmetic crown restorations.
+          </p>
+        </div>
+
+        <!-- Doctor 2: Dr. Anshu Prakash -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="w-16 h-16 rounded-2xl bg-emerald-50 text-brandEmerald flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-8 h-8"></i>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brandEmerald bg-emerald-50 px-2.5 py-1 rounded-md">Oral & Maxillofacial Surgery</span>
+          <h3 class="text-xl font-bold text-brandDark mt-3">Dr. Anshu Prakash</h3>
+          <p class="text-xs font-semibold text-brandSlate mb-1">BDS (LKO) MDS (Pdy)</p>
+          <p class="text-xs text-brandSky font-bold mb-4">Consultant Oral & Maxillofacial Surgeon</p>
+          <p class="text-xs text-brandMuted leading-relaxed border-t border-slate-100 pt-3">
+            Expert in painless surgical extractions, impacted wisdom tooth surgeries, facial trauma, and jaw corrections.
+          </p>
+        </div>
+
+        <!-- Doctor 3: Dr. (Mrs) Rashmi Sinha -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6">
+            <i data-lucide="baby" class="w-8 h-8"></i>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md">Child Dental Care</span>
+          <h3 class="text-xl font-bold text-brandDark mt-3">Dr. (Mrs) Rashmi Sinha</h3>
+          <p class="text-xs font-semibold text-brandSlate mb-1">BDS, MDS (Pat)</p>
+          <p class="text-xs text-purple-600 font-bold mb-4">Consultant Pedodontist</p>
+          <p class="text-xs text-brandMuted leading-relaxed border-t border-slate-100 pt-3">
+            Dedicated pediatric dental specialist creating friendly, anxiety-free experiences for infants, children, and teens.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Core Dental Specialities & Services -->
+  <section id="treatments" class="py-20 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-brandSky bg-brandSky/10 px-3 py-1 rounded-full">Treatment Spectrum</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brandDark mt-3 mb-4">Complete Dental Solutions</h2>
+        <p class="text-sm sm:text-base text-brandSlate font-normal">Equipped with digital radiography and sterilization units in accordance with dental healthcare standards.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Treatment 1 -->
+        <div class="p-7 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-brandSky flex items-center justify-center mb-5 group-hover:bg-brandSky group-hover:text-white transition-colors">
+            <i data-lucide="anchor" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brandDark mb-2">Oral Implantology & Fixed Teeth</h3>
+          <p class="text-xs sm:text-sm text-brandSlate leading-relaxed mb-4">
+            Advanced dental implants and fixed prosthodontic bridges performed by Dr. Jyoti Prasad (MDS) for durable tooth restoration.
+          </p>
+          <a href="#book" class="inline-flex items-center gap-1 text-xs font-bold text-brandSky hover:text-brandSkyHover">
+            <span>Book Consultation</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Treatment 2 -->
+        <div class="p-7 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-brandSky flex items-center justify-center mb-5 group-hover:bg-brandSky group-hover:text-white transition-colors">
+            <i data-lucide="scissors" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brandDark mb-2">Maxillofacial Surgery & Extractions</h3>
+          <p class="text-xs sm:text-sm text-brandSlate leading-relaxed mb-4">
+            Painless wisdom tooth extractions and surgical care handled under expert guidance by Dr. Anshu Prakash (MDS).
+          </p>
+          <a href="#book" class="inline-flex items-center gap-1 text-xs font-bold text-brandSky hover:text-brandSkyHover">
+            <span>Book Consultation</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Treatment 3 -->
+        <div class="p-7 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-5 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+            <i data-lucide="baby" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brandDark mb-2">Pediatric (Children) Dental Care</h3>
+          <p class="text-xs sm:text-sm text-brandSlate leading-relaxed mb-4">
+            Specialized child dentistry by Dr. (Mrs) Rashmi Sinha (MDS) including cavity prevention, fluoride treatments, and gentle extractions.
+          </p>
+          <a href="#book" class="inline-flex items-center gap-1 text-xs font-bold text-purple-600 hover:text-purple-700">
+            <span>Book Consultation</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Treatment 4 -->
+        <div class="p-7 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-brandSky flex items-center justify-center mb-5 group-hover:bg-brandSky group-hover:text-white transition-colors">
+            <i data-lucide="check-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brandDark mb-2">Root Canal Treatment (RCT)</h3>
+          <p class="text-xs sm:text-sm text-brandSlate leading-relaxed mb-4">
+            Comfortable root canal therapy with digital radiographic monitoring to relieve tooth pain and protect original tooth structure.
+          </p>
+          <a href="#book" class="inline-flex items-center gap-1 text-xs font-bold text-brandSky hover:text-brandSkyHover">
+            <span>Book Consultation</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Treatment 5 -->
+        <div class="p-7 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-brandSky flex items-center justify-center mb-5 group-hover:bg-brandSky group-hover:text-white transition-colors">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brandDark mb-2">Smile Designing & Teeth Whitening</h3>
+          <p class="text-xs sm:text-sm text-brandSlate leading-relaxed mb-4">
+            Advanced teeth whitening, cosmetic veneers, and gap closures for a clean and natural smile.
+          </p>
+          <a href="#book" class="inline-flex items-center gap-1 text-xs font-bold text-brandSky hover:text-brandSkyHover">
+            <span>Book Consultation</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Treatment 6 -->
+        <div class="p-7 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-sky-50 text-brandSky flex items-center justify-center mb-5 group-hover:bg-brandSky group-hover:text-white transition-colors">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brandDark mb-2">Full Mouth Crowns & Bridges</h3>
+          <p class="text-xs sm:text-sm text-brandSlate leading-relaxed mb-4">
+            Precision fabricated zirconia and ceramic crowns restoring masticatory chewing efficiency and natural aesthetics.
+          </p>
+          <a href="#book" class="inline-flex items-center gap-1 text-xs font-bold text-brandSky hover:text-brandSkyHover">
+            <span>Book Consultation</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Clinic Facilities & Amenities Section -->
+  <section id="facilities" class="py-16 bg-brandIce/40 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-brandDark">Patient Comfort & Amenities</h2>
+        <p class="text-xs sm:text-sm text-brandSlate mt-1">Designed for smooth access and hygiene during every visit.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-sky-50 text-brandSky shrink-0">
+            <i data-lucide="accessibility" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-brandDark">Wheelchair Accessible</h4>
+            <p class="text-xs text-brandSlate mt-1">Wheelchair-friendly clinic entrance for senior citizens and differently-abled patients.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-emerald-50 text-brandEmerald shrink-0">
+            <i data-lucide="baby" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-brandDark">Pediatric Friendly</h4>
+            <p class="text-xs text-brandSlate mt-1">Gentle care setups specifically organized for young children and toddlers.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-sky-50 text-brandSky shrink-0">
+            <i data-lucide="bath" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-brandDark">Clean Restrooms</h4>
+            <p class="text-xs text-brandSlate mt-1">Hygienic gender-neutral restrooms maintained with sanitation protocols.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-emerald-50 text-brandEmerald shrink-0">
+            <i data-lucide="contactless" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-brandDark">NFC & Mobile Payments</h4>
+            <p class="text-xs text-brandSlate mt-1">Seamless contactless payments supported via UPI, NFC cards, and mobile apps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. OPD Timings & Planning Section -->
+  <section id="timings" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase font-bold tracking-widest text-brandSky bg-brandSky/10 px-3 py-1 rounded-full">Schedule</span>
+        <h2 class="text-3xl font-extrabold text-brandDark mt-3 mb-2">Working Hours & Appointments</h2>
+        <p class="text-xs sm:text-sm text-brandSlate">Prior appointments are recommended to ensure dedicated consultation time.</p>
+      </div>
+
+      <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Currently Open Today
+          </div>
+          <h3 class="text-2xl font-extrabold text-brandDark">Regular Consultation Hours</h3>
+          <p class="text-sm text-brandSlate">Daily OPD Schedule: Closes at <strong>7:00 PM</strong></p>
+          <p class="text-xs text-brandMuted">For emergency appointments outside these hours, please call the clinic directly.</p>
+        </div>
+
+        <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+          <a href="tel:+916287836610" class="px-6 py-3.5 rounded-xl bg-brandSky text-white text-xs font-bold text-center hover:bg-brandSkyHover transition-colors flex items-center justify-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>062878 36610</span>
+          </a>
+          <a href="#book" class="px-6 py-3.5 rounded-xl bg-white border border-slate-300 text-brandDark text-xs font-bold text-center hover:bg-slate-100 transition-colors">
+            Request Time Slot
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Appointment Booking & Location Section -->
+  <section id="book" class="py-20 bg-brandIce/40 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Booking Form Container (7 Cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-10 border border-slate-100 shadow-xl">
+          <div class="mb-8">
+            <span class="text-xs uppercase font-bold tracking-widest text-brandSky">Online Request</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-brandDark mt-1">Book an Appointment</h2>
+            <p class="text-xs sm:text-sm text-brandSlate mt-1">Send your details and our team will get in touch with you shortly.</p>
+          </div>
+
+          <form action="#" onsubmit="event.preventDefault(); alert('Appointment request received for Dental Speciality Clinic! We will contact you at your phone number.');" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-brandSlate mb-1.5">Patient Full Name *</label>
+                <div class="relative">
+                  <input type="text" required placeholder="e.g. Alok Verma" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:border-brandSky transition-all">
+                  <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-brandSlate mb-1.5">Phone Number *</label>
+                <div class="relative">
+                  <input type="tel" required placeholder="+91 62878 36610" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:border-brandSky transition-all">
+                  <i data-lucide="phone" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-brandSlate mb-1.5">Select Department / Doctor *</label>
+                <div class="relative">
+                  <select required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:border-brandSky transition-all appearance-none text-slate-700">
+                    <option value="" disabled selected>Select Specialist / Care</option>
+                    <option>Dr. Jyoti Prasad (Prosthodontics & Implants)</option>
+                    <option>Dr. Anshu Prakash (Oral & Maxillofacial Surgery)</option>
+                    <option>Dr. (Mrs) Rashmi Sinha (Pedodontist - Child Care)</option>
+                    <option>General Dental Checkup & Cleaning</option>
+                    <option>Root Canal Treatment (RCT)</option>
+                  </select>
+                  <i data-lucide="stethoscope" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase text-brandSlate mb-1.5">Preferred Date *</label>
+                <div class="relative">
+                  <input type="date" required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:border-brandSky transition-all text-slate-700">
+                  <i data-lucide="calendar" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl text-center text-sm font-bold uppercase tracking-wider text-white bg-brandSky hover:bg-brandSkyHover shadow-lg shadow-brandSky/20 transition-all mt-4">
+              Confirm Appointment Request
+            </button>
+            <p class="text-[11px] text-center text-brandMuted mt-2">Appointments recommended. Fast confirmation over phone.</p>
+          </form>
+        </div>
+
+        <!-- Location & Contact Info (5 Cols) -->
+        <div id="location" class="lg:col-span-5 space-y-6">
+          <div class="bg-white rounded-3xl p-7 sm:p-8 border border-slate-100 shadow-md space-y-5">
+            <h3 class="text-lg font-bold text-brandDark">Clinic Location Details</h3>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2.5 rounded-xl bg-sky-50 text-brandSky shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase text-brandMuted">Address</p>
+                <p class="text-sm font-semibold text-brandDark mt-0.5">Dental Speciality Clinic (डेंटल स्पेशलिटी क्लिनिक)</p>
+                <p class="text-xs text-brandSlate mt-0.5 leading-relaxed">Rd Number 10, behind Charminar Apartments, Block 10, Rajendra Nagar, Patna, Bihar 800016</p>
+                <p class="text-[11px] font-mono text-brandSky mt-1">Google Plus Code: J537+R2 Patna, Bihar</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2.5 rounded-xl bg-sky-50 text-brandSky shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase text-brandMuted">Direct Phone</p>
+                <p class="text-sm font-semibold text-brandDark mt-0.5">062878 36610</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="p-2.5 rounded-xl bg-sky-50 text-brandSky shrink-0">
+                <i data-lucide="credit-card" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase text-brandMuted">Accepted Payments</p>
+                <p class="text-xs text-brandSlate mt-0.5">NFC Mobile Payments, UPI, Cash & Cards</p>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Dental+Speciality+Clinic+Rajendra+Nagar+Patna" target="_blank" class="w-full py-3 rounded-xl border border-brandSky text-brandSky hover:bg-brandSky hover:text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+              <i data-lucide="navigation" class="w-4 h-4"></i>
+              <span>Get Directions on Google Maps</span>
+            </a>
+          </div>
+
+          <!-- Rating Summary Box -->
+          <div class="bg-amber-50/80 rounded-2xl p-5 border border-amber-200/80 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-400 text-white flex items-center justify-center font-bold text-sm">
+                4.8★
+              </div>
+              <div>
+                <p class="text-xs font-bold text-amber-950">Top Rated Dental Clinic</p>
+                <p class="text-[11px] text-amber-800">Based on 29+ Google Maps Reviews</p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-amber-900 bg-white px-3 py-1.5 rounded-lg border border-amber-200">Verified</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Footer -->
+  <footer class="bg-brandDark text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
+        <!-- Col 1 -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-brandSky flex items-center justify-center text-white">
+              <i data-lucide="smile" class="w-5 h-5"></i>
+            </div>
+            <span class="text-lg font-bold text-white tracking-tight">Dental Speciality Clinic</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Rd Number 10, behind Charminar Apartments, Block 10, Rajendra Nagar, Patna, Bihar 800016.
+          </p>
+          <p class="text-xs text-slate-400">Phone: 062878 36610</p>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="text-xs uppercase font-bold text-white tracking-widest mb-4">Our Specialists</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><strong class="text-slate-200">Dr. Jyoti Prasad</strong> - Prosthodontist & Oral Implantologist</li>
+            <li><strong class="text-slate-200">Dr. Anshu Prakash</strong> - Oral & Maxillofacial Surgeon</li>
+            <li><strong class="text-slate-200">Dr. (Mrs) Rashmi Sinha</strong> - Pedodontist (Child Care)</li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="text-xs uppercase font-bold text-white tracking-widest mb-4">Clinic Features</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brandEmerald"></i> Wheelchair-accessible entrance</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brandEmerald"></i> NFC Mobile & UPI Payments</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brandEmerald"></i> Clean restrooms available</li>
+            <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-brandEmerald"></i> Appointments recommended</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Dental Speciality Clinic, Patna. All rights reserved.</p>
+        <p>Plus Code: J537+R2 Patna</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 10. Floating WhatsApp Appointment Button -->
+  <a href="https://wa.me/916287836610?text=Hi,%20I%20want%20to%20book%20an%20appointment%20at%20Dental%20Speciality%20Clinic" target="_blank" aria-label="Book on WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 active:scale-95 transition-transform duration-200">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
